@@ -105,6 +105,9 @@
       }
 
       $gmap.setOptions(map_options);
+      
+      // Add settings for Styled Maps
+      $gmap.setOptions({styles: opts.styles});
 
       // Create new icon
       var gicon = new google.maps.Marker();
@@ -254,6 +257,7 @@
     zoom: 1,
     markers: [],
     controls: [],
+    styles: [],
     scrollwheel: false,
     doubleclickzoom: true,
     maptype: 'ROADMAP',
